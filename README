@@ -1,0 +1,24 @@
+
+Usage example:
+--------------
+
+<?php
+require_once 'Polycast/Service/Rackspace/CloudFiles.php';
+
+$account = 'yourusername';
+$apiKey = 'yourapikey';
+
+$service = new Polycast_Service_Rackspace_CloudFiles();
+$service->authenticate($account, $apiKey);
+
+$service->createStorageContainer('images');
+
+$path = '/path/to/image';
+$service->createStorageObjectFromFile('images', $path, array('meta' => array('color' => 'green', 'food' => 'vegetables')));
+$service->deleteStorageObject('images', basename($path));
+
+$service->createStorageObjectFromFile('images', $path);
+$service->createCdnContainer('images', array('ttl' => 7200));
+$service->setCdnContainerAttributes('images', array('cdnEnabled' => false));
+
+?>
