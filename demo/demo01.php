@@ -1,8 +1,8 @@
 <?php
 
 // Fill in your Rackspace credentials here
-define('CLOUDFILES_ACCOUNT', 'polycaster');
-define('CLOUDFILES_APIKEY', 'bc5ce3a20d1148c7e108aa8fc07b263e');
+define('CLOUDFILES_ACCOUNT', 'you');
+define('CLOUDFILES_APIKEY', 'xyz');
 
 require_once dirname(__FILE__) . '/../library/Polycast/Service/Rackspace/CloudFiles.php';
 
