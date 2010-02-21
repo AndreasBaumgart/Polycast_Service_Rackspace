@@ -1,24 +1,34 @@
+--------------------------------------------------------------------------------
+IMPLEMENTATION OF RACKSPACECLOUD CLOUDFILES API FOR ZEND FRAMEWORK
+--------------------------------------------------------------------------------
 
-Usage example:
---------------
+LICENSE
 
-<?php
-require_once 'Polycast/Service/Rackspace/CloudFiles.php';
+This source file is subject to the new BSD license that is bundled with this
+package in the file LICENSE.
 
-$account = 'yourusername';
-$apiKey = 'yourapikey';
+It is also available through the world-wide-web at this URL:
+http://polycast.de/license/new-bsd.txt
 
-$service = new Polycast_Service_Rackspace_CloudFiles();
-$service->authenticate($account, $apiKey);
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to andreas@polycast.de so I can send you a copy immediately.
 
-$service->createStorageContainer('images');
+--------------------------------------------------------------------------------
 
-$path = '/path/to/image';
-$service->createStorageObjectFromFile('images', $path, array('meta' => array('color' => 'green', 'food' => 'vegetables')));
-$service->deleteStorageObject('images', basename($path));
+USAGE
 
-$service->createStorageObjectFromFile('images', $path);
-$service->createCdnContainer('images', array('ttl' => 7200));
-$service->setCdnContainerAttributes('images', array('cdnEnabled' => false));
+See demo/* for usage examples.
 
-?>
+--------------------------------------------------------------------------------
+
+REFERENCES
+
+CloudFiles API docs:
+http://www.rackspacecloud.com/cloud_hosting_products/files/api
+
+ZendFramework:
+http://framework.zend.com
+
+Polycast_Service_Rackspace@github:
+http://github.com/polycaster/Polycast_Service_Rackspace
