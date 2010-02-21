@@ -25,6 +25,11 @@
 require_once 'Zend/Service/Abstract.php';
 
 /**
+ * @see Polycast_Service_Rackspace_CloudFiles_Exception
+ */
+require_once 'Polycast/Service/Rackspace/CloudFiles/Exception.php';
+
+/**
  * The Polycast_Service_Rackspace_CloudFiles component is an implementation of 
  * the RackspaceCloud CloudFiles API.
  * 

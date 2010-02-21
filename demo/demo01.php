@@ -1,10 +1,12 @@
 <?php
 
 // Fill in your Rackspace credentials here
-define('CLOUDFILES_ACCOUNT', 'you');
-define('CLOUDFILES_APIKEY', 'xyz');
+define('CLOUDFILES_ACCOUNT', 'your-account-name-here');
+define('CLOUDFILES_APIKEY', 'your-api-key-here');
 
-require_once dirname(__FILE__) . '/../library/Polycast/Service/Rackspace/CloudFiles.php';
+set_include_path(dirname(__FILE__) . '/../library' . PATH_SEPARATOR . get_include_path());
+
+require_once 'Polycast/Service/Rackspace/CloudFiles.php';
 
 define('DEMO_LOCAL_FILE', dirname(__FILE__) . '/rick.jpg');
 define('DEMO_CONTAINER_NAME', 'MyContainer');
